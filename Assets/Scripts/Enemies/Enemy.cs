@@ -44,7 +44,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (other.CompareTag("Arm"))
         {
-            if(Input.GetKeyDown(KeyCode.Mouse0)) life -= 1;
+            if(Input.GetMouseButtonDown(0)) life -= 1;
 
         }
     }
@@ -52,7 +52,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (other.CompareTag("Arm"))
         {
-            if(Input.GetKeyDown(KeyCode.Mouse0)) life -= 1;
+            if(Input.GetMouseButtonDown(0)) life -= 1;
 
         }
     }

@@ -156,14 +156,14 @@ public class BossManager : MonoBehaviour
     {
         if (other.CompareTag("Arm"))
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0)) bossLife -= 1;
+            if (Input.GetMouseButtonDown(0)) bossLife -= 1;
         }
     }
     protected virtual void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Arm"))
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0)) bossLife -= 1;
+            if (Input.GetMouseButtonDown(0)) bossLife -= 1;
         }
     }
     private void OnDrawGizmos()

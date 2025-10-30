@@ -815,6 +815,7 @@ GameObject:
   - component: {fileID: 1285595376}
   - component: {fileID: 1285595375}
   - component: {fileID: 1285595379}
+  - component: {fileID: 1285595380}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -921,6 +922,20 @@ MonoBehaviour:
   timeTMP: {fileID: 0}
   enemiesTMP: {fileID: 0}
   defeatScene: 0
+--- !u!114 &1285595380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285595374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa06970383138342b90a1fbddf13300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlock: 0
+  wantToUnlock: 1
 --- !u!1 &1396190510
 GameObject:
   m_ObjectHideFlags: 0
