@@ -8,7 +8,7 @@ public class PlayerLife : MonoBehaviour
     void Start()
     {
         lifeF = RestLife;
-        life = 100;
+        life = 20;
     }
 
     void Update()

@@ -44,7 +44,16 @@ public abstract class Enemy : MonoBehaviour
     {
         if (other.CompareTag("Arm"))
         {
-            life -= 1;
+            if(Input.GetKeyDown(KeyCode.Mouse0)) life -= 1;
+
+        }
+    }
+    protected virtual void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Arm"))
+        {
+            if(Input.GetKeyDown(KeyCode.Mouse0)) life -= 1;
+
         }
     }
 }
