@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class Levels : MonoBehaviour
 {
     public static bool startLevel;
@@ -19,6 +20,10 @@ public class Levels : MonoBehaviour
     {
         timer += Time.deltaTime;
         ChangeLevelTMP();
+        if(level >= 6)
+        {
+            SceneManager.LoadScene("VictoryMenu");
+        }
     }
 
     void ChangeLevelTMP()
