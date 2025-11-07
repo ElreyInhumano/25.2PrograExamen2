@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 3
-  life: 2
+  life: 1
   kamikaze: 0
   radius: 10
   maxTimer: 2

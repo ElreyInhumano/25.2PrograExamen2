@@ -155,4 +155,5 @@ MonoBehaviour:
   radius: 1
   maxTimer: 2
   timer: 0
+  inRange: 0
   playerLife: {fileID: 0}

@@ -150,9 +150,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 3
-  life: 3
+  life: 2
   kamikaze: 0
-  radius: 2
-  maxTimer: 3
+  radius: 1.5
+  maxTimer: 4
   timer: 0
+  inRange: 0
   playerLife: {fileID: 0}

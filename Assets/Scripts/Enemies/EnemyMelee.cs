@@ -1,15 +1,17 @@
 using UnityEngine;
-
+using System.Collections;
 public class EnemyMelee : Enemy
 {
     [SerializeField] protected float maxTimer;
     [SerializeField] float timer;
+    [SerializeField] bool inRange;
     [SerializeField] PlayerLife playerLife;
 
     protected override void Start()
     {
         base.Start();
         playerLife = player.GetComponent<PlayerLife>();
+        StartCoroutine(Attacking());
     }
     protected override void Update()
     {
@@ -30,6 +32,8 @@ public class EnemyMelee : Enemy
             direction.y = rb.linearVelocity.y;
             rb.linearVelocity = direction;
             transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position);
+            inRange = false;
+           // StopAllCoroutines(); 
         }
         else if (distanceToPlayer < radius)
         {
@@ -40,13 +44,24 @@ public class EnemyMelee : Enemy
             direction.y = rb.linearVelocity.y;
             rb.linearVelocity = direction;
             transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position);
-            timer += Time.deltaTime;
-            if (timer >= maxTimer)
+            inRange = true;
+            
+            
+        }
+    }
+    IEnumerator Attacking()
+    {
+        while (true)
+        {
+            yield return null;
+            while (inRange)
             {
+                yield return new WaitForSeconds(maxTimer);
                 Attack();
-                timer = 0;
             }
         }
+        
+        
     }
     void Attack()
     {
